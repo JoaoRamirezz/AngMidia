@@ -1,0 +1,27 @@
+create table Usuario(
+Nome varchar(255),
+Cpf varchar(11) primary key,
+Aniversario datetime,
+Senha varchar(255),
+Salt varchar(255),
+Email varchar(255)
+)
+
+
+create table ListaForuns(
+CpfUsuario varchar(11) Foreign Key References Usuario(Cpf),
+IDGroup int foreign key references Foruns(ID),
+Cargo varchar(255),
+
+)
+
+
+create table Foruns(
+ID int primary key,
+Nome varchar(255)
+)
+
+
+create table CargosForum (
+
+)
